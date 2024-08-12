@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keylogger</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="wrapper">
+    <svg>
+        <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+            Keylogger
+        </text>
+    </svg>
+</div>
+  <div class="keyboard">
+    <div class="row">
+      <button class="key" data-key="`"><span class="shadow"></span><span class="edge"></span><span class="front">`</span></button>
+      <button class="key" data-key="1"><span class="shadow"></span><span class="edge"></span><span class="front">1</span></button>
+      <button class="key" data-key="2"><span class="shadow"></span><span class="edge"></span><span class="front">2</span></button>
+      <button class="key" data-key="3"><span class="shadow"></span><span class="edge"></span><span class="front">3</span></button>
+      <button class="key" data-key="4"><span class="shadow"></span><span class="edge"></span><span class="front">4</span></button>
+      <button class="key" data-key="5"><span class="shadow"></span><span class="edge"></span><span class="front">5</span></button>
+      <button class="key" data-key="6"><span class="shadow"></span><span class="edge"></span><span class="front">6</span></button>
+      <button class="key" data-key="7"><span class="shadow"></span><span class="edge"></span><span class="front">7</span></button>
+      <button class="key" data-key="8"><span class="shadow"></span><span class="edge"></span><span class="front">8</span></button>
+      <button class="key" data-key="9"><span class="shadow"></span><span class="edge"></span><span class="front">9</span></button>
+      <button class="key" data-key="0"><span class="shadow"></span><span class="edge"></span><span class="front">0</span></button>
+      <button class="key" data-key="-"><span class="shadow"></span><span class="edge"></span><span class="front">-</span></button>
+      <button class="key" data-key="="><span class="shadow"></span><span class="edge"></span><span class="front">=</span></button>
+      <button class="key utility" data-key="DEL"><span class="shadow"></span><span class="edge"></span><span class="front">DEL</span></button>
+    </div>
+    <div class="row">
+      <button class="key utility" data-key="TAB"><span class="shadow"></span><span class="edge"></span><span class="front">TAB</span></button>
+      <button class="key" data-key="q"><span class="shadow"></span><span class="edge"></span><span class="front">q</span></button>
+      <button class="key" data-key="w"><span class="shadow"></span><span class="edge"></span><span class="front">w</span></button>
+      <button class="key" data-key="e"><span class="shadow"></span><span class="edge"></span><span class="front">e</span></button>
+      <button class="key" data-key="r"><span class="shadow"></span><span class="edge"></span><span class="front">r</span></button>
+      <button class="key" data-key="t"><span class="shadow"></span><span class="edge"></span><span class="front">t</span></button>
+      <button class="key" data-key="y"><span class="shadow"></span><span class="edge"></span><span class="front">y</span></button>
+      <button class="key" data-key="u"><span class="shadow"></span><span class="edge"></span><span class="front">u</span></button>
+      <button class="key" data-key="o"><span class="shadow"></span><span class="edge"></span><span class="front">o</span></button>
+      <button class="key" data-key="p"><span class="shadow"></span><span class="edge"></span><span class="front">p</span></button>
+      <button class="key" data-key="["><span class="shadow"></span><span class="edge"></span><span class="front">[</span></button>
+      <button class="key" data-key="]"><span class="shadow"></span><span class="edge"></span><span class="front">]</span></button>
+      <button class="key" data-key="\"><span class="shadow"></span><span class="edge"></span><span class="front">\</span></button>
+    </div>
+    <div class="row">
+      <button class="key utility" data-key="C"><span class="shadow"></span><span class="edge"></span><span class="front">C</span></button>
+      <button class="key" data-key="a"><span class="shadow"></span><span class="edge"></span><span class="front">a</span></button>
+      <button class="key" data-key="s"><span class="shadow"></span><span class="edge"></span><span class="front">s</span></button>
+      <button class="key" data-key="d"><span class="shadow"></span><span class="edge"></span><span class="front">d</span></button>
+      <button class="key" data-key="f"><span class="shadow"></span><span class="edge"></span><span class="front">f</span></button>
+      <button class="key" data-key="g"><span class="shadow"></span><span class="edge"></span><span class="front">g</span></button>
+      <button class="key" data-key="h"><span class="shadow"></span><span class="edge"></span><span class="front">h</span></button>
+      <button class="key" data-key="j"><span class="shadow"></span><span class="edge"></span><span class="front">j</span></button>
+      <button class="key" data-key="k"><span class="shadow"></span><span class="edge"></span><span class="front">k</span></button>
+      <button class="key" data-key="l"><span class="shadow"></span><span class="edge"></span><span class="front">l</span></button>
+      <button class="key" data-key=";"><span class="shadow"></span><span class="edge"></span><span class="front">;</span></button>
+      <button class="key" data-key="'"><span class="shadow"></span><span class="edge"></span><span class="front">'</span></button>
+      <button class="key utility" data-key="E"><span class="shadow"></span><span class="edge"></span><span class="front">E</span></button>
+    </div>
+    <div class="row">
+      <button class="key utility" data-key="SHIFT"><span class="shadow"></span><span class="edge"></span><span class="front">SHIFT</span></button>
+      <button class="key" data-key="z"><span class="shadow"></span><span class="edge"></span><span class="front">z</span></button>
+      <button class="key" data-key="x"><span class="shadow"></span><span class="edge"></span><span class="front">x</span></button>
+      <button class="key" data-key="c"><span class="shadow"></span><span class="edge"></span><span class="front">c</span></button>
+      <button class="key" data-key="v"><span class="shadow"></span><span class="edge"></span><span class="front">v</span></button>
+      <button class="key" data-key="b"><span class="shadow"></span><span class="edge"></span><span class="front">b</span></button>
+      <button class="key" data-key="n"><span class="shadow"></span><span class="edge"></span><span class="front">n</span></button>
+      <button class="key" data-key="m"><span class="shadow"></span><span class="edge"></span><span class="front">m</span></button>
+      <button class="key" data-key=","><span class="shadow"></span><span class="edge"></span><span class="front">,</span></button>
+      <button class="key" data-key="."><span class="shadow"></span><span class="edge"></span><span class="front">.</span></button>
+      <button class="key" data-key="/"><span class="shadow"></span><span class="edge"></span><span class="front">/</span></button>
+      <button class="key utility" data-key="SHIFT"><span class="shadow"></span><span class="edge"></span><span class="front">SHIFT</span></button>
+    </div>
+  </div>  
+  <form action="/download" method="POST">
+    <button type="submit">Download</button>
+  </form>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

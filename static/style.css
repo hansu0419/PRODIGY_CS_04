@@ -1,0 +1,257 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+form button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:wght@700&display=swap');
+
+/* Key jiggle animation */
+@keyframes jiggle {
+  0% { 
+    transform: translate(1px, 1px) rotate(0deg); 
+    background-color: #60C1B6;
+  }
+  10% { 
+    transform: translate(-1px, 2px) rotate(-1deg); 
+    background-color: #4CAF50; /* Darker shade */
+  }
+  20% { 
+    transform: translate(-3px, 0px) rotate(1deg); 
+    background-color: #60C1B6;
+  }
+  30% { 
+    transform: translate(1px, 1px) rotate(2deg); 
+    background-color: #4CAF50;
+  }
+  40% { 
+    transform: translate(-2px, -1px) rotate(-2deg); 
+    background-color: #60C1B6;
+  }
+  50% { 
+    transform: translate(1px, 1px) rotate(-6deg); 
+    background-color: #4CAF50;
+  }
+  60% { 
+    transform: translate(4px, -4px) rotate(6deg); 
+    background-color: #60C1B6;
+  }
+  70% { 
+    transform: translate(1px, 1px) rotate(0deg); 
+    background-color: #4CAF50;
+  }
+  80% { 
+    transform: translate(3px, -2px) rotate(-1deg); 
+    background-color: #60C1B6;
+  }
+  90% { 
+    transform: translate(-1px, 1px) rotate(1deg); 
+    background-color: #4CAF50;
+  }
+  100% { 
+    transform: translate(1px, 1px) rotate(-1deg); 
+    background-color: #60C1B6;
+  }
+}
+
+.key.jiggle {
+  animation: jiggle 0.5s;
+}
+
+/* Base styles */
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  background:#4CAF50;
+}
+
+.keyboard {
+  background: #F6F6F6;
+  padding: 45px 40px;
+  border-radius: 40px;
+  position: relative;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  width: 1120px;
+}
+
+.key {
+  border: none;
+  border-radius: 16px;
+  color: #60C1B6;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 65px;
+  padding: 18px 24px;
+  position: relative;
+  height: 4rem;
+  background-color: #E0E0E0; /* Light grey background */
+}
+
+.front {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  background: white;
+  border-radius: 12px;
+  color: #60C1B6;
+  height: 4rem;
+  min-width: 65px;
+  margin: 0;
+  padding: 0px;
+  transform: translateY(-4px);
+  will-change: transform;
+  transition: transform 
+    600ms 
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  border-radius: 12px;
+  background: hsl(0deg 0% 0% / 0.25);
+  background: transparent;
+  transform: translateY(2px);
+  padding: 0;
+}
+
+.edge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.15);
+  background: transparent;
+  padding: 0;
+}
+
+.utility .front {
+  color: #868888;
+  flex: auto;
+}
+
+.key:hover .front {
+  transform: translateY(-6px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.key:hover .shadow {
+  transform: translateY(4px);
+  transition:
+    transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.key:active .front {
+  transform: translateY(-2px);
+  transition: transform 34ms;
+}
+
+.key:active .shadow {
+  transform: translateY(1px);
+}
+
+svg {
+  font-family: "JetBrains Mono", sans-serif;
+  width: 100%;
+  height: 100%;
+  min-width: 1000px;
+  margin-bottom: 25px;
+}
+
+svg text {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #FFFFFF;
+  font-size: 6rem;
+}
+
+@keyframes stroke {
+  0% {
+      fill: rgba(255, 255, 255, 0);
+      stroke: rgba(255, 255, 255, 1);
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 50%;
+      stroke-width: 2;
+  }
+  70% {
+      fill: rgba(255, 255, 255, 0);
+      stroke: rgba(255, 255, 255, 1);
+  }
+  80% {
+      fill: rgba(255, 255, 255, 0);
+      stroke: rgba(255, 255, 255, 1);
+      stroke-width: 3;
+  }
+  100% {
+      fill: rgba(255, 255, 255, 1);
+      stroke: rgba(255, 255, 255, 0);
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+      stroke-width: 0;
+  }
+}
+
+.wrapper {
+  background-color: transparent;
+}
