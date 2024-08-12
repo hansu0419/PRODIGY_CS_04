@@ -1,18 +1,11 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
 *, *::before, *::after {
   box-sizing: border-box;
 }
-/*
-  2. Remove default margin
-*/
+
 * {
   margin: 0;
 }
-/*
-  3. Allow percentage-based heights in the application
-*/
+
 html, body {
   height: 100%;
 }
@@ -42,7 +35,6 @@ form button[type="submit"]:hover {
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Montserrat:wght@700&display=swap');
 
-/* Key jiggle animation */
 @keyframes jiggle {
   0% { 
     transform: translate(1px, 1px) rotate(0deg); 
@@ -50,7 +42,7 @@ form button[type="submit"]:hover {
   }
   10% { 
     transform: translate(-1px, 2px) rotate(-1deg); 
-    background-color: #4CAF50; /* Darker shade */
+    background-color: #4CAF50; 
   }
   20% { 
     transform: translate(-3px, 0px) rotate(1deg); 
@@ -94,7 +86,6 @@ form button[type="submit"]:hover {
   animation: jiggle 0.5s;
 }
 
-/* Base styles */
 body {
   align-items: center;
   display: flex;
@@ -104,7 +95,10 @@ body {
   min-width: 100vw;
   margin: 0;
   padding: 0;
-  background:#4CAF50;
+  background-image: url(images/image.png);
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
 }
 
 .keyboard {
